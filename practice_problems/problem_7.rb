@@ -43,6 +43,18 @@ def pairs(arr)
   count
 end
 
+# # another solution
+# def pairs(arr)
+#   count = 0
+#   values = arr.tally.values
+
+#   values.each do |value|
+#     count += value / 2
+#   end
+
+#   count
+# end
+
 
 p pairs([3, 1, 4, 5, 9, 2, 6, 5, 3, 5, 8, 9, 7]) == 3
 p pairs([2, 7, 1, 8, 2, 8, 1, 8, 2, 8, 4]) == 4
