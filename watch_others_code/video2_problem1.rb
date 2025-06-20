@@ -44,6 +44,24 @@ def next_bigger_num(num)
   digits.join.to_i
 end
 
+# # another solution
+# def find_digit_match(checking_num, target_num)
+#   target_digits = target_num.digits.sort
+#   checking_digits = checking_num.digits.sort
+
+#   target_digits == checking_digits
+# end
+
+# def next_bigger_num(num)
+#   max_num = num.digits.sort { |a, b| b <=> a }.join.to_i
+#   return -1 if num.to_s.size == 1 ||
+#                num.digits.uniq.size == 1 ||
+#                num == max_num
+#   (num + 1..max_num).each do |n|
+#     return n if find_digit_match(n, num)
+#   end
+# end 
+
 p next_bigger_num(9) == -1
 p next_bigger_num(12) == 21
 p next_bigger_num(513) == 531
